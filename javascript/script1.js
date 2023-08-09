@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var one = $("#one-carousel");
     var two = $("#two-carousel");
-    var three = $("three-carousel");
+    var three = $("#three-carousel");
     one.owlCarousel(
         {
             margin:10,
@@ -43,6 +43,22 @@ $(document).ready(function(){
             loop:true,
             items:5,
             autoplay:true,
+            center:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                600:{
+                    items:3,
+                    nav:false
+                },
+                1000:{
+                    items:5,
+                    nav:true,
+                    loop:true
+                }
+            }
         }
     );
 
